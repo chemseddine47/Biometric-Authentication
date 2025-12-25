@@ -78,6 +78,8 @@ the image datatset has the folowing structure:
   <img src="images/image4.png" width="800">
 </p>
 ---
+
+
 ## 🔬 Evaluation Methodology
 To ensure a realistic assessment of security, the dataset of 22 participants was strictly divided into two disjoint groups for "Open-Set" Authentication testing:
 
