@@ -47,6 +47,10 @@ This folder represents the evolution of the project. Instead of telling the comp
 * **`realtime_demo.py`**
     * **What it does:** The proof of concept. It connects to a webcam/video feed, detects eyes in real-time, feeds them to the CNN, and overlays the authentication result on the screen.
 
+<p align="center">
+  <img src="images/image2.png" width="800">
+</p>
+
 ---
 
 ## 👁️ The "EyeReg" Dataset
@@ -64,6 +68,9 @@ From those videos, the scripts in this repo generated a massive image database f
 1.  **Combined Eyes:** ~3,000 images per participant (Total: **69,505 images**).
 2.  **Separate Eyes:** ~6,000 images per participant (Total: **138,889 images**).
 
+<p align="center">
+  <img src="images/image3.png" width="800">
+</p>
 ---
 ## 🔬 Evaluation Methodology
 To ensure a realistic assessment of security, the dataset of 22 participants was strictly divided into two disjoint groups for "Open-Set" Authentication testing:
