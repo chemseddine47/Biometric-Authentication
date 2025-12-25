@@ -1,4 +1,4 @@
-# Biometric VR Authentication (EyeReg Project)
+# Biometric Authentication (EyeReg Project)
 
 ## 📅 Context: The State of VR Security (2023)
 Back in early 2023, before the current explosion of generative AI took over the tech world, the industry's eyes were fixed on the "Metaverse" and the rapid adoption of XR (Extended Reality) headsets. We saw hardware like the HTC Vive Pro Eye and the anticipation for Apple's entry into the space pushing boundaries. But there was a massive, overlooked flaw: **Identity**.
@@ -7,6 +7,9 @@ Once you put on a headset, you are effectively anonymous. Passwords in VR are a 
 
 This repository contains the complete implementation of my comparative study: a "Classic" Signal Processing approach (k-NN) versus a "Modern" Deep Learning approach (CNN).
 
+<p align="center">
+  <img src="images/image1.png" width="800">
+</p>
 ---
 
 ## 📂 Project Architecture
