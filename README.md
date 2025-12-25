@@ -62,24 +62,38 @@ From those videos, the scripts in this repo generated a massive image database f
 2.  **Separate Eyes:** ~6,000 images per participant (Total: **138,889 images**).
 
 ---
+## 🔬 Evaluation Methodology
+To ensure a realistic assessment of security, the dataset of 22 participants was strictly divided into two disjoint groups for "Open-Set" Authentication testing:
+
+* [cite_start]**Authorized Group (Clients):** 15 Users (Used for Training and Validation)[cite: 3].
+* [cite_start]**Impostor Group (Intruders):** 7 Users (Never seen by the model, used solely for Intrusion testing)[cite: 3].
+
+#### Metric Calculation
+* **FAR (False Acceptance Rate):** Tested by calculating how many of the **7 Impostors** were successfully classified as any of the 15 authorized users.
+    * *Formula:* `False Acceptances / Total Impostor Attempts`
+* **FRR (False Rejection Rate):** Tested by calculating how many of the **15 Authorized Users** were rejected when trying to access their own accounts.
+    * *Formula:* `False Rejections / Total Client Attempts`
+
+*Note: For the CNN approach, a confidence threshold of **99.9%** (0.999) was enforced. Any prediction below this confidence was treated as a rejection.*
+
+---
 
 ## 📊 Results & Performance
-We didn't just build this; we stress-tested it. Using a rigorous split of training and testing data (typically 80/20 split for the CNN and specific sample thresholds for KNN), here is how the two methods compared:
+We didn't just build this; we stress-tested it. Using the rigorous split described above, here is how the two methods compared:
 
 ### 1. The KNN Baseline
 Using the standard geometric features (Quotients + FFT):
-* **False Acceptance Rate (FAR):** 14.29% (Security was decent).
-* **False Rejection Rate (FRR):** 33.33% (Usability was poor; valid users were rejected too often).
+* [cite_start]**False Acceptance Rate (FAR):** 14.29% (Security was decent)[cite: 5].
+* [cite_start]**False Rejection Rate (FRR):** 33.33% (Usability was poor; valid users were rejected too often)[cite: 5].
 
-*Optimization:* By increasing the feature set to 9 landmarks (including eye height/width ratios), we managed to drop the **FRR to 26.67%**.
+[cite_start]*Optimization:* By increasing the feature set to 9 landmarks (including eye height/width ratios), we managed to drop the **FRR to 26.67%**[cite: 5].
 
 ### 2. The CNN Upgrade
 The Deep Learning model, trained on the "Combined Eyes" dataset, proved to be superior in balancing security and usability:
-* **False Acceptance Rate (FAR):** 14.29% (Matched the strict security of KNN).
-* **False Rejection Rate (FRR):** **26.67%** ( Significantly better usability).
+* [cite_start]**False Acceptance Rate (FAR):** 14.29% (Matched the strict security of KNN)[cite: 5].
+* [cite_start]**False Rejection Rate (FRR):** **26.67%** ( Significantly better usability)[cite: 5].
 
 ### Conclusion
 While the math-based k-NN approach is lightweight and explainable, the CNN approach demonstrated that learning the "texture" and "shape" of the eye region provides a much smoother user experience without compromising security.
-
 ---
 *Authored by Chems Eddine Nemeur, Decembre 2025.*
