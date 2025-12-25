@@ -94,6 +94,8 @@ The Deep Learning model, trained on the "Combined Eyes" dataset, proved to be su
 * **False Rejection Rate (FRR):** **26.67%** ( Significantly better usability).
 
 ### Conclusion
+
 While the math-based k-NN approach is lightweight and explainable, the CNN approach demonstrated that learning the "texture" and "shape" of the eye region provides a much smoother user experience without compromising security.
+
 ---
 *Authored by Chems Eddine Nemeur, Decembre 2025.*
